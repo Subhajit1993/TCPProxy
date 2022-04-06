@@ -9,4 +9,4 @@ from flaskr import create_app
 
 app = create_app(config=Config)
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=os.getenv("FLASK_ENV") != "production", port=os.getenv("PORT"))
+    app.run(host='0.0.0.0', debug=os.getenv("FLASK_ENV") != "production", port=os.getenv("PORT"), threaded=True)
